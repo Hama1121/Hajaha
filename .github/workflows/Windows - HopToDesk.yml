@@ -1,4 +1,4 @@
-name: Windows 10 - HopToDesk
+name: Windows - Anydesk
 
 on:
   workflow_dispatch:
@@ -12,12 +12,11 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/6mxum60ljukokzn4flb8n/Down.bat?rlkey=jjflao3yvizf2a2ye0q5mln9d&dl=1" -OutFile "Downloads.bat"
+          Invoke-WebRequest -Uri "https://www.dropbox.com/s/ei73gt7vevxck2t/Downloads.bat?dl=1" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
-      - name: Log In To HopToDesk
-        run: cmd /c show.bat
+      - name: Log In To AnyDesk
+        run: cmd /c start.bat
 
-       - name: Time Counter
+      - name: Time Counter
         run: python time.py
-        
