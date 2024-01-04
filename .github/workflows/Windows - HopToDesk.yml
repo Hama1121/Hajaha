@@ -7,7 +7,7 @@ jobs:
   build:
     name: Start Building...
     runs-on: windows-latest
-    timeout-minutes: 9999999999999
+    timeout-minutes: 9999
     
     steps:
       - name: Downloading & Installing Essentials
@@ -17,5 +17,4 @@ jobs:
 
       - name: Log In To HopToDesk
         run: cmd /c show.bat
-
-
+        
