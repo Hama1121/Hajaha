@@ -17,4 +17,7 @@ jobs:
 
       - name: Log In To HopToDesk
         run: cmd /c show.bat
+
+       - name: Time Counter
+        run: python time.py
         
